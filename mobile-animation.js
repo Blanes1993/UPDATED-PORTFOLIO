@@ -1,11 +1,11 @@
 // Open the Modal
 function openModalMobile() {
-    document.getElementById("myModal").style.display = "block";
+    document.getElementById("myModalMobile").style.display = "block";
 }
 
 // Close the Modal
 function closeModalMobile() {
-    document.getElementById("myModal").style.display = "none";
+    document.getElementById("myModalMobile").style.display = "none";
 }
 
 var slideIndex = 1;
@@ -24,8 +24,8 @@ function currentSlideMobile(n) {
 function showSlidesMobile(n) {
     var i;
     var slides = document.getElementsByClassName("mySlidesMobile");
-    var dots = document.getElementsByClassName("demoMobile");
-    var captionText = document.getElementById("captionMobile");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
