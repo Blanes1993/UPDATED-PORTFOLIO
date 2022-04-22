@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESPONSIVE DESIGN | MONOCHROMATIC PORTFOLIO</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 
+        Author: DOUGLAS F. BLANES JR.
+        Date: 22/09/2021
+        Project: Portfolio
+    -->
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //declaration
+
+            var scrollLink = $(".scroll");
+
+            // smooth scrolling
+            scrollLink.click(function (e) {
+                e.preventDefault();
+                $("body,html").animate({
+                    scrollTop: $(this.hash).offset().top
+                });
+
+            });
+
+            $(".toggle").click(function () {
+                $("#p-toggle").toggle(500);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+        <div class="container flex">
+            <h2 class="logo"><a class="scroll" href="#Index">DOUGLAS</a></h2>
+            <nav>
+                <ul>
+                    <li><a class="scroll" href="#Aboutme">ABOUT ME</a></li>
+                    <li><a class="scroll" href="#Project">PROJECT</a></li>
+                    <li><a class="scroll" href="#Contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- MAIN CONTENT -->
+        <div class="showcase main" id="Index">
+            <div class="container grid2">
+                <div class="showcase-text">
+                    <h2 class="title">Hello, I am <span>Douglas</span></h2>
+                    <h1 class="description">I'm a Software <span>Designer</span></h1>
+                    <p id="p-toggle" class="profile">A confident and highly disciplined IT graduate with fundamental
+                        knowledge of software design.
+                        I am keen to details and able to work under pressure.
+                        Seeking for an opportunity to showcase and enhance my skills as a software designer.</p>
+                    <a class="btn btn-primary toggle">Try me!</a>
+                </div>
+                <div class="showcase-image">
+                    <div class="border" id="border">
+                        <img class="main-img" src="assets/MEb&w.png" alt="ME">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT ME  -->
+
+    <div class="about-section" id="Aboutme">
+        <div class="container flex-container">
+            <div class="left">
+                <img class="toga" src="assets/TOGA-PIC-FILTERED.jpg" alt="TOGA-PIC-FILTERED">
+            </div>
+            <div class="right">
+                <h1 class="title">About <span>Me</span></h1>
+                <p class="about-p my-1">A confident and highly disciplined IT graduate with fundamental knowledge of
+                    software design.
+                    I am keen to details and able to work under pressure.
+                    Seeking for an opportunity to showcase and enhance my skills as an entry level software designer.
+                </p>
+                <div class="border-profile about-grid">
+                    <div>
+                        <p><strong>Name:</strong> Douglas F. Blanes Jr.</p>
+                        <p><strong>Phone:</strong> 09275114062</p>
+                        <p><strong>Gmail:</strong> blanesdouglas@gmail.com</p>
+                    </div>
+                    <div>
+                        <p><strong>Age:</strong> 28</p>
+                        <p><strong>Address:</strong> Cebu City</p>
+                        <p><strong>Github:</strong> Blanes1993</p>
+                    </div>
+
+                </div>
+
+                <div class="icons-about">
+                    <a href="https://www.facebook.com/DouglasBlanes/" target="_blank"><i class="fa fa-facebook-square"
+                            id="focus"></i></a>
+                    <a href="https://twitter.com/Blanezdouglasss" target="_blank"><i
+                            class="fa fa-twitter-square"></i></a>
+                    <a href="https://github.com/Blanes1993" target="_blank"><i class="fa fa-github-square"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-secondary">View Resume</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- SOCIAL MEDIA -->
+    <!-- <div class="social-media">
+        <div class="container">
+            <h1 class="heading text-center">SOCIAL MEDIA</h1>
+           
+            <div class="grid text-center">
+                <div class="media-trans">
+                    <a href="https://twitter.com/Blanezdouglasss" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                    <h4>Twitter</h4>
+                    <p class="text-secondary"></p>
+                </div>
+                <div class="media-trans">
+                    <a href="https://github.com/Blanes1993" target="_blank"><i class="fa fa-github-square"></i></a>
+                    <h4>Github</h4>
+                </div>
+                <div class="media-trans">
+                    <a href="https://www.facebook.com/DouglasBlanes/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <h4>Facebook</h4>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- RESUME -->
+    <!-- <div class="showcase-resume" id="Resume">
+        <div class="container">
+            <h1 class="heading text-center">RESUME</h1>
+            <div class="grid2">
+                <div class="col-md-l">
+                    <h3 class="a-h3">PERSONAL PROFILE</h3>
+                        <p class="a-p lead">
+                        A confident and highly disciplined IT student. I have the ability
+                        to work under pressure. I believed that I am well equipped with
+                        the knowledge and confidence that I can deliver the task you think
+                        I can do.
+                        </p>
+                    <h3 class="b-h3">CAREER OBJECTIVE</h3>
+                        <p class="b-p lead">
+                        Seeking for an opportunity to enhance my skills and to gain
+                        practical experience as well and to contribute to the growth of
+                        the organization .
+                        </p>
+                    <h3 class="c-h3">SKILLS</h3>
+                        <ul class="c-p pl-4 lead list-group list-group-flush">
+                        <li>Basics of HTML, CSS, Bootstrap, PHP, MySQL and SQL.</li>
+                        <li>Oriented in Database Management System.</li>
+                        <li>knowledgeable in MS Office Application.</li>
+                        <li>knowledgeable in Adobe Photoshop.</li>
+                        <li> knowledgeable in InVision Studio.</li>
+                        </ul>
+                </div>
+                <div class="col-md-r">
+                    <h3 class="e-h3">PERSONAL DATA</h3>
+                        <ul class="e-p list-group list-group-flush mb-2 lead">
+                        <li class="list-group-item">Douglas F. Blanes Jr.</li>
+                        <li class="list-group-item">November 7, 1993</li>
+                        <li class="list-group-item">Catholic</li>
+                        <li class="list-group-item">Filipino</li>
+                        <li class="list-group-item"></li>
+                        </ul>
+                    <h3 class="f-h3">EDUCATION HISTORY</h3>
+                    <h4 class="f-h4">UNIVERSITY OF CEBU - MAIN CAMPUS</h4>
+                        <p class="f-p lead">
+                        - Bachelor of Science in Information technology | 2017 -present.
+                        </p>
+                        <h3 class="d-h3">CONTACT DETAILS</h3>
+                        <ul class="d-p lead pl-4">
+                        <li>www.facebook.com/DouglasBlanes/</li>
+                        <li>https://twitter.com/Blanezdouglasss</li>
+                        <li>blanesdouglas@gmail.com</li>
+                        <li>Cellphone#: 0322395633</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- BANNER -->
+    <div class="showcase-banner text-center">
+        <div class="banner-title">
+            <h2 class="banner title">CAREER <span>OBJECTIVE</span></h2>
+            <p class="banner">Seeking for an opportunity to enhance my skills and to gain
+                practical experience as well and to contribute to the growth of
+                the organization.</p>
+        </div>
+    </div>
+
+    <!-- WORK -->
+    <div class="showcase-work" id="Project">
+
+        <div class="container">
+            <h1 class="title"> Project</h1>
+            <h3><span>PRISTINE</span> - is an uber for freelance cleaning services </h3>
+            <p>Pristine aims to help people who could not find time to clean their houses and appliances.
+                Pristine's goal is also to help freelance cleaners find jobs in the midst of this pandemic.
+                is way, we can help improve the lives of many by helping freelance cleaners reach more clients and
+                helping people find the cleaning services easily through the internet.</p>
+            <!-- Images used to open the lightbox -->
+
+            <!-- WEB SECTION -->
+            <h3>Web</h3>
+            <div class="row">
+                <div class="column hover-shadow">
+                    <img src="assets/web/Home.png" onclick="openModal();currentSlide(1)">
+                </div>
+                <div class="column hover-shadow">
+                    <img src="assets/web/Services.png" onclick="openModal();currentSlide(2)">
+                </div>
+                <div class="column hover-shadow">
+                    <img src="assets/web/Team.png" onclick="openModal();currentSlide(3)">
+                </div>
+            </div>
+
+            <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="assets/web/Home.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="assets/web/Services.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="assets/web/Team.png" style="width:100%">
+                    </div>
+
+
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+                    <!-- Thumbnail image controls -->
+
+                    <div class="row">
+                        <div class="column">
+                            <img class="demo" src="assets/web/Home.png" onclick="currentSlide(1)" alt="Home">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="assets/web/Services.png" onclick="currentSlide(2)" alt="Services">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="assets/web/Team.png" onclick="currentSlide(3)" alt="Team">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- CONTACT -->
+    <div class="showcase-contact" id="Contact">
+        <div class="container">
+            <div class="showcase-info">
+                <h1 class="title contact-title text-center">Contact <span>Me</span></h1>
+                <div class="text-center">
+                    <img class="contact-image" src="assets/NEON.jpg" alt="NEON BG">
+                </div>
+                <div class="row text-center">
+                    <div class="column wrapper">
+                        <i class="fa fa-mobile-phone"></i>
+                        <p><span> 09275114062</span></p>
+
+                    </div>
+                    <div class="column wrapper">
+                        <i class="fa fa-envelope"></i>
+                        <p><span> blanesdouglas@gmail.com</span></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="icons text-center">
+                <a href="https://www.facebook.com/DouglasBlanes/" target="_blank"><i class="fa fa-facebook-square"
+                        id="focus"></i></a>
+                <a href="https://twitter.com/Blanezdouglasss" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                <a href="https://github.com/Blanes1993" target="_blank"><i class="fa fa-github-square"></i></a>
+            </div>
+        </div>
+        <h2 class="text-center text-footer">CREATED BY: <span>DOUGLAS F. BLANES JR. </span></h2>
+    </div>
+    <!-- SCRIPT -->
+    <script src="web-animation.js"></script>
+</body>
+
+</html>
